@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckeyyhd1en2ax"]
+[gd_scene load_steps=5 format=3 uid="uid://ckeyyhd1en2ax"]
 
 [ext_resource type="Texture2D" uid="uid://bsupq7xkvc3gr" path="res://assets/Sprout Lands - UI Pack/HealthFull.png" id="1_7rwpd"]
 [ext_resource type="Script" path="res://UI/HealthBar.gd" id="1_wljk7"]
+[ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="3_i4a17"]
+
+[sub_resource type="FontVariation" id="FontVariation_vxub7"]
+base_font = ExtResource("3_i4a17")
 
 [node name="HealthBar" type="Control"]
 layout_mode = 3
@@ -16,3 +20,14 @@ offset_right = 32.0
 offset_bottom = 33.0
 texture = ExtResource("1_7rwpd")
 stretch_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 18.0
+offset_right = 70.0
+offset_bottom = 48.0
+pivot_offset = Vector2(27, 0)
+theme_override_fonts/font = SubResource("FontVariation_vxub7")
+theme_override_font_sizes/font_size = 16
+text = "x 5"

@@ -16,22 +16,19 @@ extends Control
 		max_hearts = value
 		
 # create instances of heart empty and heart full ui
-@onready var heart_empty = $HealthEmpty
 @onready var heart_full = $HealthFull
+@onready var label = $Label
 
 func set_hearts(value):
 	hearts = clamp(value, 0, max_hearts)
-	if heart_full != null:
-		heart_full.set_size(Vector2(hearts * 32, 11))
+	if label != null:
+		label.text = "x " + str(hearts)
 
 func set_max_hearts(value):
 	# make sure the max possible value passed is at least 1
 	max_hearts = max(value, 1)
 	# self.hearts can not go above max_hearts
 	self.hearts = min(hearts, max_hearts)
-	# if the player has health print this
-	if heart_empty != null:
-		heart_empty.set_size(Vector2(max_hearts * 32, 11))
 
 func _ready():
 	# set the max hearts to the playerstat script's max hearts
