@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=5 format=3 uid="uid://uor7tebi4v3v"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
 [ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="3_ewpu2"]
+[ext_resource type="PackedScene" uid="uid://bwwkbi78yj5ms" path="res://objects/Hay.tscn" id="4_ocaej"]
 
 [node name="Level 0" type="Node2D"]
 y_sort_enabled = true
@@ -20,3 +21,6 @@ remote_path = NodePath("../../Camera2D")
 
 [node name="Cow" parent="." instance=ExtResource("3_ewpu2")]
 position = Vector2(75, 4)
+
+[node name="ObjectTemplate" parent="." instance=ExtResource("4_ocaej")]
+position = Vector2(126, 52)
