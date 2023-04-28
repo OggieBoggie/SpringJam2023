@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8u3hr05y075n"]
+
+[ext_resource type="PackedScene" uid="uid://bfn2664u6enx7" path="res://objects/object_template.tscn" id="1_ldbox"]
+[ext_resource type="Texture2D" uid="uid://6q36r1vhu4ls" path="res://assets/Edited Textures/Stump.png" id="2_2j2lu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nasci"]
+size = Vector2(21, 14)
+
+[node name="ObjectTemplate" instance=ExtResource("1_ldbox")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_2j2lu")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_nasci")

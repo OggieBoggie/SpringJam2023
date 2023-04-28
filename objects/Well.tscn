@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0l52d5nhtpx3"]
+
+[ext_resource type="PackedScene" uid="uid://bfn2664u6enx7" path="res://objects/object_template.tscn" id="1_xpbua"]
+[ext_resource type="Texture2D" uid="uid://c8cr4qisofr4n" path="res://assets/Sprout Lands - Sprites/objects/Water well.png" id="2_56brj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4csqr"]
+size = Vector2(25, 17)
+
+[node name="Well" instance=ExtResource("1_xpbua")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_56brj")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_4csqr")

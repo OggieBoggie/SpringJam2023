@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwwkbi78yj5ms"]
+
+[ext_resource type="PackedScene" uid="uid://bfn2664u6enx7" path="res://objects/object_template.tscn" id="1_m6633"]
+[ext_resource type="Texture2D" uid="uid://vng400o42xlf" path="res://assets/Sprout Lands - Sprites/objects/Barn structures.png" id="2_a4amo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvljc"]
+size = Vector2(34, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd5fg"]
+size = Vector2(25, 17)
+
+[node name="Hay" instance=ExtResource("1_m6633")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_a4amo")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-6, -17)
+shape = SubResource("RectangleShape2D_cvljc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(6.5, -31.5)
+shape = SubResource("RectangleShape2D_nd5fg")
