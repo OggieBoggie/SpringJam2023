@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var animation_tree = $Player_AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
+var stats = PlayerStats
+
 func _ready():
 	animation_tree.active = true
 	animation_tree.set("parameters/Idle/blend_position", starting_direction)
@@ -32,7 +34,4 @@ func pick_new_state():
 	else:
 		state_machine.travel("Idle")
 		
-		
-		
-# animation_tree.active = true
-# animation_tree.set("parameters/Idle/blend_position", starting_direction)
+	
