@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://d25dmkhf7umva"]
+
+[ext_resource type="Script" path="res://HitHurtBoxes/hurtbox.gd" id="1_c4fqj"]
+
+[sub_resource type="GDScript" id="GDScript_ihu1m"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="Hurtbox" type="Area2D"]
+script = ExtResource("1_c4fqj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+script = SubResource("GDScript_ihu1m")
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 2.0
+
+[connection signal="invincibility_ended" from="." to="." method="_on_invincibility_ended"]
+[connection signal="invincibility_started" from="." to="." method="_on_invincibility_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
