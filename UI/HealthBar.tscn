@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckeyyhd1en2ax"]
+
+[ext_resource type="Texture2D" uid="uid://bsupq7xkvc3gr" path="res://assets/Sprout Lands - UI Pack/HealthFull.png" id="1_7rwpd"]
+[ext_resource type="Texture2D" uid="uid://cc8qnrb4e1xdx" path="res://assets/Sprout Lands - UI Pack/HealthEmpty.png" id="1_c6pgb"]
+[ext_resource type="Script" path="res://UI/HealthBar.gd" id="1_wljk7"]
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wljk7")
+
+[node name="HealthEmpty" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 33.0
+texture = ExtResource("1_c6pgb")
+stretch_mode = 1
+
+[node name="HealthFull" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 158.0
+offset_bottom = 33.0
+texture = ExtResource("1_7rwpd")
+stretch_mode = 1
