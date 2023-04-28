@@ -1,8 +1,9 @@
-[gd_scene load_steps=42 format=3 uid="uid://dnqb0hxaf0xi3"]
+[gd_scene load_steps=44 format=3 uid="uid://dnqb0hxaf0xi3"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_ckm2o"]
 [ext_resource type="Texture2D" uid="uid://culb1dmllsuqq" path="res://assets/Sprout Lands - Sprites/characters/Premium Charakter Spritesheet.png" id="1_m7xu8"]
 [ext_resource type="PackedScene" uid="uid://blf4l8bdtbjna" path="res://HitHurtBoxes/hitbox.tscn" id="2_7gnrk"]
+[ext_resource type="PackedScene" uid="uid://d25dmkhf7umva" path="res://HitHurtBoxes/hurtbox.tscn" id="4_3n0j2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c800j"]
 size = Vector2(10, 7)
@@ -194,8 +195,8 @@ tracks/0/keys = {
 "values": [40, 41, 42, 43, 44, 45, 46, 47]
 }
 
-[sub_resource type="Animation" id="Animation_sar4s"]
-resource_name = "water_right"
+[sub_resource type="Animation" id="Animation_0s88a"]
+resource_name = "water_down"
 length = 0.7
 step = 0.05
 tracks/0/type = "value"
@@ -208,7 +209,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [184, 185, 186, 187, 188, 190, 191]
+"values": [160, 161, 162, 163, 164, 166, 167]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -246,7 +247,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [1.5708]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -258,7 +259,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(11, 4)]
+"values": [Vector2(15, -4)]
 }
 
 [sub_resource type="Animation" id="Animation_med5h"]
@@ -328,6 +329,73 @@ tracks/4/keys = {
 "values": [Vector2(-11, 5)]
 }
 
+[sub_resource type="Animation" id="Animation_sar4s"]
+resource_name = "water_right"
+length = 0.7
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [184, 185, 186, 187, 188, 190, 191]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("WaterHitbox/HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"water_finished"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("WaterHitbox:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("WaterHitbox/HitBox/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11, 4)]
+}
+
 [sub_resource type="Animation" id="Animation_ehnl7"]
 resource_name = "water_up"
 length = 0.7
@@ -393,73 +461,6 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(4, -4)]
-}
-
-[sub_resource type="Animation" id="Animation_0s88a"]
-resource_name = "water_down"
-length = 0.7
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [160, 161, 162, 163, 164, 166, 167]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("WaterHitbox/HitBox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.7),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"water_finished"
-}]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("WaterHitbox:rotation")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [1.5708]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("WaterHitbox/HitBox/CollisionShape2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(15, -4)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_apssx"]
@@ -582,6 +583,9 @@ graph_offset = Vector2(-170, 32)
 radius = 6.0
 height = 32.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v2nr"]
+size = Vector2(10, 7)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ckm2o")
 
@@ -621,6 +625,15 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_e6idt")
 disabled = true
 
+[node name="Hurtbox" parent="." instance=ExtResource("4_3n0j2")]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_2v2nr")
+
 [connection signal="animation_finished" from="Player_AnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
 
 [editable path="WaterHitbox/HitBox"]
+[editable path="Hurtbox"]
