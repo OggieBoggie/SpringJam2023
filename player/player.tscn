@@ -603,9 +603,9 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_xbxpk")
 anim_player = NodePath("../Player_AnimationPlayer")
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_3llmn")
-parameters/Idle/blend_position = Vector2(-0.00639999, 1.08079)
-parameters/Walk/blend_position = Vector2(0, 0)
-parameters/Water/blend_position = Vector2(-0.00160003, -1.04731)
+parameters/Idle/blend_position = Vector2(0, 1)
+parameters/Walk/blend_position = Vector2(0, 1)
+parameters/Water/blend_position = Vector2(0, 1)
 
 [node name="WaterHitbox" type="Marker2D" parent="."]
 position = Vector2(0, -4)
