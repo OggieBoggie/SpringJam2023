@@ -24,3 +24,8 @@ script = SubResource("GDScript_ihu1m")
 
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
+wait_time = 2.0
+
+[connection signal="invincibility_ended" from="." to="." method="_on_invincibility_ended"]
+[connection signal="invincibility_started" from="." to="." method="_on_invincibility_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
