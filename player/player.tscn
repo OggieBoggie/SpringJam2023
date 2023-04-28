@@ -634,6 +634,7 @@ position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_2v2nr")
 
 [connection signal="animation_finished" from="Player_AnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 
 [editable path="WaterHitbox/HitBox"]
 [editable path="Hurtbox"]

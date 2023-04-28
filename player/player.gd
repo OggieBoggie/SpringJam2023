@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var animation_tree = $Player_AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 @onready var hurtbox = $Hurtbox
+@onready var sprite = $Sprite2D
 
 enum {
 	Walk,
@@ -51,6 +52,7 @@ func water_finished():
 
 func _on_hurtbox_area_entered(area):
 	stats.health -= 1
+	sprite.modulate.a = 0.5
 	hurtbox.start_invincibility(5)
 
 func dash_state():
