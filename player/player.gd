@@ -6,7 +6,13 @@ extends CharacterBody2D
 @onready var animation_tree = $Player_AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 
+enum {
+	Walk,
+	Water
+}
+
 var stats = PlayerStats
+var state = Walk
 
 func _ready():
 	animation_tree.active = true
@@ -33,3 +39,6 @@ func pick_new_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+
+func water_finished():
+	state = Walk
