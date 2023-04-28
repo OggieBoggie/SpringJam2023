@@ -20,14 +20,11 @@ func _on_timer_timeout():
 # this function is connected from a signal in hurtbox and will get called if invincibility_started 
 # signal has been emitted
 func _on_invincibility_started():
-	# make the player transparent if they get hit
-	modulate.a = 0.5
 	# disable the hit box if invincbility started
 	collision_shape.set_deferred("disabled", true)
 
 # this function is also connected, but will start when invincibility_ended has been emitted
 func _on_invincibility_ended():
 	# change player transparency back
-	modulate.a = 1
 	
 	collision_shape.disabled = false

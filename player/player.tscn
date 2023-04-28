@@ -5,6 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://blf4l8bdtbjna" path="res://HitHurtBoxes/hitbox.tscn" id="2_7gnrk"]
 [ext_resource type="PackedScene" uid="uid://d25dmkhf7umva" path="res://HitHurtBoxes/hurtbox.tscn" id="4_3n0j2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v2nr"]
+size = Vector2(10, 7)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c800j"]
 size = Vector2(10, 7)
 
@@ -583,9 +586,6 @@ graph_offset = Vector2(-170, 32)
 radius = 6.0
 height = 32.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2v2nr"]
-size = Vector2(10, 7)
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_ckm2o")
 
@@ -593,6 +593,14 @@ script = ExtResource("1_ckm2o")
 texture = ExtResource("1_m7xu8")
 hframes = 8
 vframes = 24
+
+[node name="Hurtbox" parent="." instance=ExtResource("4_3n0j2")]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_2v2nr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4.5)
@@ -625,16 +633,11 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_e6idt")
 disabled = true
 
-[node name="Hurtbox" parent="." instance=ExtResource("4_3n0j2")]
-collision_layer = 0
-collision_mask = 4
+[node name="Transparent" type="Timer" parent="."]
 
-[node name="CollisionShape2D" parent="Hurtbox" index="0"]
-position = Vector2(0, 4.5)
-shape = SubResource("RectangleShape2D_2v2nr")
-
-[connection signal="animation_finished" from="Player_AnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="animation_finished" from="Player_AnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
+[connection signal="timeout" from="Transparent" to="." method="_on_transparent_timeout"]
 
-[editable path="WaterHitbox/HitBox"]
 [editable path="Hurtbox"]
+[editable path="WaterHitbox/HitBox"]
