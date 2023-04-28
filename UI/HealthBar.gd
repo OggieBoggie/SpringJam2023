@@ -37,7 +37,7 @@ func _ready():
 	# set the max hearts to the playerstat script's max hearts
 	self.max_hearts = PlayerStats.max_health
 	# set the hearts to the current health in player stats
-	self.health = PlayerStats.health
+	self.hearts = PlayerStats.health
 	# whenever the health changed is called, also call this function
 	PlayerStats.health_changed.connect(set_hearts)
 	PlayerStats.max_health_changed.connect(set_max_hearts)
