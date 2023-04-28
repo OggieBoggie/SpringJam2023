@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://barmvkswk2erp"]
+
+[ext_resource type="PackedScene" uid="uid://bfn2664u6enx7" path="res://objects/object_template.tscn" id="1_5m2ol"]
+[ext_resource type="Texture2D" uid="uid://gnvcnnsquq05" path="res://assets/Edited Textures/Log.png" id="2_o2sii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iw4gd"]
+size = Vector2(21, 8)
+
+[node name="ObjectTemplate" instance=ExtResource("1_5m2ol")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 2)
+texture = ExtResource("2_o2sii")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, -4)
+shape = SubResource("RectangleShape2D_iw4gd")

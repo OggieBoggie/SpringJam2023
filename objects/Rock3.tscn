@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbdf1fl0s6st5"]
+
+[ext_resource type="PackedScene" uid="uid://bfn2664u6enx7" path="res://objects/object_template.tscn" id="1_ww7v7"]
+[ext_resource type="Texture2D" uid="uid://due1sl72k2sml" path="res://assets/Edited Textures/Rock3.png" id="2_spql8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g14m5"]
+radius = 6.0
+
+[node name="ObjectTemplate" instance=ExtResource("1_ww7v7")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, 3)
+texture = ExtResource("2_spql8")
+offset = Vector2(0, -8)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_g14m5")
