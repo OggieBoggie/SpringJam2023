@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=12 format=3 uid="uid://uor7tebi4v3v"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
 [ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="3_ewpu2"]
-[ext_resource type="PackedScene" uid="uid://bwwkbi78yj5ms" path="res://objects/Hay.tscn" id="4_ocaej"]
+[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://objects/Well.tscn" id="4_blr85"]
+[ext_resource type="PackedScene" uid="uid://ctkx6by4k6v7q" path="res://objects/Tree.tscn" id="5_2a50l"]
+[ext_resource type="PackedScene" uid="uid://ciukaqn8jrria" path="res://objects/Sunflower.tscn" id="6_srulp"]
+[ext_resource type="PackedScene" uid="uid://b8u3hr05y075n" path="res://objects/Stumps.tscn" id="7_j5ugw"]
+[ext_resource type="PackedScene" uid="uid://barmvkswk2erp" path="res://objects/Log.tscn" id="8_eh1d4"]
+[ext_resource type="PackedScene" uid="uid://q0gk7l2h7n1p" path="res://objects/Rock1.tscn" id="9_ci1wy"]
+[ext_resource type="PackedScene" uid="uid://caqjqkrh8ppf5" path="res://objects/Rock2.tscn" id="10_fu7op"]
+[ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="11_2y4b8"]
 
 [node name="Level 0" type="Node2D"]
 y_sort_enabled = true
@@ -22,5 +29,26 @@ remote_path = NodePath("../../Camera2D")
 [node name="Cow" parent="." instance=ExtResource("3_ewpu2")]
 position = Vector2(75, 4)
 
-[node name="ObjectTemplate" parent="." instance=ExtResource("4_ocaej")]
-position = Vector2(126, 52)
+[node name="Well" parent="." instance=ExtResource("4_blr85")]
+position = Vector2(32, 85)
+
+[node name="Tree" parent="." instance=ExtResource("5_2a50l")]
+position = Vector2(-35, 82)
+
+[node name="Sunflower" parent="." instance=ExtResource("6_srulp")]
+position = Vector2(84, 69)
+
+[node name="ObjectTemplate" parent="." instance=ExtResource("7_j5ugw")]
+position = Vector2(-59, 22)
+
+[node name="ObjectTemplate2" parent="." instance=ExtResource("8_eh1d4")]
+position = Vector2(-64, -30)
+
+[node name="ObjectTemplate3" parent="." instance=ExtResource("9_ci1wy")]
+position = Vector2(51, -30)
+
+[node name="ObjectTemplate4" parent="." instance=ExtResource("10_fu7op")]
+position = Vector2(116, -27)
+
+[node name="ObjectTemplate5" parent="." instance=ExtResource("11_2y4b8")]
+position = Vector2(-20, -36)
