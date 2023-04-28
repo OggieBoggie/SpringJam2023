@@ -1,6 +1,6 @@
 extends Node
 
-# make sure to auto load this file in project settings when using it for player
+# make sure to auto load the tscn file (not this file) in project settings when using it for player
 
 @export var max_health : int = 5:
 	# set get for getting max health
