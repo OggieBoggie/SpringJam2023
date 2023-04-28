@@ -16,13 +16,15 @@ extends Control
 		max_hearts = value
 		
 # create instances of heart empty and heart full ui
-@onready var heart_full = $HealthFull
 @onready var label = $Label
+@onready var animation = $HealthAnimation
 
 func set_hearts(value):
 	hearts = clamp(value, 0, max_hearts)
 	if label != null:
 		label.text = "x " + str(hearts)
+	if hearts <= 0:
+		animation.play("animate")
 
 func set_max_hearts(value):
 	# make sure the max possible value passed is at least 1
@@ -31,6 +33,7 @@ func set_max_hearts(value):
 	self.hearts = min(hearts, max_hearts)
 
 func _ready():
+	animation.frame = 0
 	# set the max hearts to the playerstat script's max hearts
 	self.max_hearts = PlayerStats.max_health
 	# set the hearts to the current health in player stats
