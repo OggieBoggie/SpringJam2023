@@ -5,3 +5,8 @@
 [node name="Level 0" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ucpj4")]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
