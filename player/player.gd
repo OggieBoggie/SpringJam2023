@@ -7,7 +7,8 @@ extends CharacterBody2D
 @onready var state_machine = animation_tree.get("parameters/playback")
 
 func _ready():
-	update_animation_parameters(starting_direction)
+	animation_tree.active = true
+	animation_tree.set("parameters/Idle/blend_position", starting_direction)
 
 func _physics_process(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -30,3 +31,8 @@ func pick_new_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
+		
+		
+		
+# animation_tree.active = true
+# animation_tree.set("parameters/Idle/blend_position", starting_direction)
