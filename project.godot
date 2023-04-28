@@ -14,6 +14,13 @@ config/name="SpringJam2023"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
+window/stretch/mode="canvas_items"
+window/stretch/scale=4.0
+
 [rendering]
 
 renderer/rendering_method="mobile"
