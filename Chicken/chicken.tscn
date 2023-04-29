@@ -168,9 +168,9 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kakfr"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ldm58"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s5leb"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cmdlu"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_2cgua"]
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sexmk"]
 states/Chase/node = SubResource("AnimationNodeBlendSpace2D_4u74w")
@@ -179,8 +179,8 @@ states/Idle/node = SubResource("AnimationNodeBlendSpace2D_ekk2k")
 states/Idle/position = Vector2(317, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_486jo")
 states/Walk/position = Vector2(537, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_283q1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_ihygo"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_q2rcs"), "Idle", "Chase", SubResource("AnimationNodeStateMachineTransition_tiuvd"), "Chase", "Idle", SubResource("AnimationNodeStateMachineTransition_kakfr"), "Chase", "Walk", SubResource("AnimationNodeStateMachineTransition_ldm58"), "Walk", "Chase", SubResource("AnimationNodeStateMachineTransition_cmdlu")]
-graph_offset = Vector2(-113, 62)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_283q1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_ihygo"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_q2rcs"), "Idle", "Chase", SubResource("AnimationNodeStateMachineTransition_tiuvd"), "Chase", "Idle", SubResource("AnimationNodeStateMachineTransition_kakfr"), "Chase", "Walk", SubResource("AnimationNodeStateMachineTransition_s5leb"), "Walk", "Chase", SubResource("AnimationNodeStateMachineTransition_2cgua")]
+graph_offset = Vector2(-88, 62)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_831uj"]
 
@@ -188,7 +188,7 @@ graph_offset = Vector2(-113, 62)
 size = Vector2(20, 11)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ea7b"]
-radius = 51.6236
+radius = 99.0051
 
 [node name="Chicken" type="CharacterBody2D"]
 script = ExtResource("1_kwvhi")
@@ -216,7 +216,8 @@ parameters/Chase/blend_position = Vector2(0, 0)
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(0, 0)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="WalkTimer" type="Timer" parent="."]
+process_callback = 0
 
 [node name="HitBox" parent="." instance=ExtResource("3_met61")]
 collision_layer = 4
@@ -227,12 +228,18 @@ position = Vector2(0, 5.5)
 shape = SubResource("RectangleShape2D_o2a8w")
 
 [node name="PlayerDetection" parent="." instance=ExtResource("4_5f1o1")]
+collision_layer = 0
+collision_mask = 8
 
 [node name="CollisionShape2D" parent="PlayerDetection" index="0"]
 shape = SubResource("CircleShape2D_3ea7b")
 debug_color = Color(0.792157, 0.4, 0.411765, 0.419608)
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="IdleTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="WalkTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
+[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
 
 [editable path="HitBox"]
 [editable path="PlayerDetection"]
