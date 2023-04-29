@@ -9,7 +9,7 @@ extends Control
 		
 
 # set get for hearts ui full
-@onready var max_hearts : int = 5:
+@onready var max_hearts : int = 99:
 	get:
 		return max_hearts
 	set(value):

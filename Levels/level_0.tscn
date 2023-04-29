@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c3jbirk87r43w"]
+[gd_scene load_steps=14 format=3 uid="uid://c3jbirk87r43w"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://caqjqkrh8ppf5" path="res://objects/Rock2.tscn" id="10_fu7op"]
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="11_2y4b8"]
 [ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="12_dfoca"]
+[ext_resource type="PackedScene" uid="uid://id0d54xfhrs" path="res://objects/flower_template.tscn" id="13_iesx2"]
 
 [node name="Level 0" type="Node2D"]
 y_sort_enabled = true
@@ -59,5 +60,14 @@ position = Vector2(-395, -238)
 
 [node name="BottomRight" parent="PlayerCam/Limits" index="1"]
 position = Vector2(362, 219)
+
+[node name="FlowerTemplate" parent="." instance=ExtResource("13_iesx2")]
+position = Vector2(-65, -7)
+
+[node name="FlowerTemplate2" parent="." instance=ExtResource("13_iesx2")]
+position = Vector2(-28, -18)
+
+[node name="FlowerTemplate3" parent="." instance=ExtResource("13_iesx2")]
+position = Vector2(7, -19)
 
 [editable path="PlayerCam"]
