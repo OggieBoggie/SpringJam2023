@@ -49,8 +49,6 @@ func _physics_process(delta):
 				idle_timer.start(idle_time)
 			sprite.flip_h = velocity.x < 0
 
-			
-
 func seek_player():
 	if player_detection.can_see_player():
 		state = Chase
