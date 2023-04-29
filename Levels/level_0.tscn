@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=13 format=3 uid="uid://c3jbirk87r43w"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://q0gk7l2h7n1p" path="res://objects/Rock1.tscn" id="9_ci1wy"]
 [ext_resource type="PackedScene" uid="uid://caqjqkrh8ppf5" path="res://objects/Rock2.tscn" id="10_fu7op"]
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="11_2y4b8"]
+[ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="12_dfoca"]
 
 [node name="Level 0" type="Node2D"]
 y_sort_enabled = true
@@ -18,9 +19,7 @@ y_sort_enabled = true
 [node name="Player" parent="." instance=ExtResource("1_ucpj4")]
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
-remote_path = NodePath("../../Camera2D")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+remote_path = NodePath("../../PlayerCam")
 
 [node name="User Interface" type="CanvasLayer" parent="."]
 
@@ -52,3 +51,13 @@ position = Vector2(116, -27)
 
 [node name="ObjectTemplate5" parent="." instance=ExtResource("11_2y4b8")]
 position = Vector2(-20, -36)
+
+[node name="PlayerCam" parent="." instance=ExtResource("12_dfoca")]
+
+[node name="TopLeft" parent="PlayerCam/Limits" index="0"]
+position = Vector2(-395, -238)
+
+[node name="BottomRight" parent="PlayerCam/Limits" index="1"]
+position = Vector2(362, 219)
+
+[editable path="PlayerCam"]
