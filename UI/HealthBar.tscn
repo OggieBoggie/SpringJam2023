@@ -50,4 +50,3 @@ offset_bottom = 48.0
 pivot_offset = Vector2(27, 0)
 theme_override_fonts/font = SubResource("FontVariation_vxub7")
 theme_override_font_sizes/font_size = 16
-text = "x 5"

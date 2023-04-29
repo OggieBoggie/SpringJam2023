@@ -33,6 +33,7 @@ func set_max_hearts(value):
 	self.hearts = min(hearts, max_hearts)
 
 func _ready():
+	label.text = "x " + str(hearts)
 	animation.frame = 0
 	# set the max hearts to the playerstat script's max hearts
 	self.max_hearts = PlayerStats.max_health

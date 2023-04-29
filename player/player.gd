@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var hurtbox = $Hurtbox
 @onready var sprite = $Sprite2D
 @onready var timer = $Transparent
+@onready var current_level = 0
 
 enum {
 	Walk,
@@ -32,6 +33,7 @@ func _physics_process(delta):
 			water_state()
 		Dash:
 			pass
+
 func move_state():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 		
@@ -65,7 +67,8 @@ func dash_state():
 	pass
 
 func change_scene():
-	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+	current_level += 1
+	get_tree().change_scene_to_file("res://Levels/level_" + str(current_level) + ".tscn" )
 
 func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):

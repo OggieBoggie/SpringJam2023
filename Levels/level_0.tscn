@@ -81,11 +81,29 @@ position = Vector2(-29, -20)
 [node name="pink" parent="." instance=ExtResource("17_am7ly")]
 position = Vector2(-35, -1)
 
+[node name="pink2" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-21, -5)
+
+[node name="pink3" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-17, -16)
+
+[node name="pink4" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-14, -25)
+
+[node name="pink5" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(1, -22)
+
+[node name="pink6" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(7, -9)
+
 [node name="purple" parent="." instance=ExtResource("16_miyyb")]
 position = Vector2(-26, 14)
 
 [node name="White" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-6, -14)
+position = Vector2(-5, -11)
+
+[node name="White2" parent="." instance=ExtResource("15_lmvsr")]
+position = Vector2(12, -18)
 
 [node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
 position = Vector2(23, -11)
