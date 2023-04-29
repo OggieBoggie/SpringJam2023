@@ -1,35 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://id0d54xfhrs"]
+[gd_scene load_steps=5 format=3 uid="uid://id0d54xfhrs"]
 
 [ext_resource type="Script" path="res://objects/FlowerTemplate.gd" id="1_rgtj2"]
-[ext_resource type="Texture2D" uid="uid://b7pmxsn0xicw6" path="res://assets/Edited Textures/White-Flower-Sheet.png" id="2_hcr0o"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tflji"]
-atlas = ExtResource("2_hcr0o")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wiamt"]
-atlas = ExtResource("2_hcr0o")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_50fdc"]
-atlas = ExtResource("2_hcr0o")
-region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xksow"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tflji")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wiamt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_50fdc")
-}],
+"frames": [],
 "loop": false,
 "name": &"animate",
-"speed": 1.0
+"speed": 0.5
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqoo6"]

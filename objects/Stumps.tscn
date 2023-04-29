@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nasci"]
 size = Vector2(21, 14)
 
-[node name="ObjectTemplate" instance=ExtResource("1_ldbox")]
+[node name="Stump" instance=ExtResource("1_ldbox")]
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_2j2lu")
