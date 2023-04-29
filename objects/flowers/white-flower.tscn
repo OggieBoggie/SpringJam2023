@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://id0d54xfhrs"]
+[gd_scene load_steps=9 format=3 uid="uid://b7u8r24mrylmk"]
 
-[ext_resource type="Script" path="res://objects/FlowerTemplate.gd" id="1_rgtj2"]
+[ext_resource type="Script" path="res://objects/flowers/white-flower.gd" id="1_pu0l8"]
 [ext_resource type="Texture2D" uid="uid://b7pmxsn0xicw6" path="res://assets/Edited Textures/White-Flower-Sheet.png" id="2_hcr0o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tflji"]
@@ -29,7 +29,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"animate",
-"speed": 1.0
+"speed": 0.5
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uqoo6"]
@@ -37,12 +37,12 @@ size = Vector2(7.25, 2)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wyapi"]
 radius = 3.0
-height = 10.0
+height = 12.0
 
 [node name="FlowerTemplate" type="StaticBody2D"]
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("1_rgtj2")
+script = ExtResource("1_pu0l8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -4)
@@ -63,4 +63,5 @@ position = Vector2(-1, -3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wyapi")
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="FlowerHurt" to="." method="_on_flower_hurt_area_entered"]

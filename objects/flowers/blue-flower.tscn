@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="PackedScene" uid="uid://b7u8r24mrylmk" path="res://objects/flowers/white-flower.tscn" id="1_wk5qr"]
+[ext_resource type="Texture2D" uid="uid://cbnwe5oqqxfc1" path="res://assets/Edited Textures/Blue-Flower-Sheet.png" id="2_17qkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85qx4"]
+atlas = ExtResource("2_17qkg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esxeq"]
+atlas = ExtResource("2_17qkg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnuao"]
+atlas = ExtResource("2_17qkg")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm5hd"]
+atlas = ExtResource("2_17qkg")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qcxj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85qx4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esxeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnuao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm5hd")
+}],
+"loop": false,
+"name": &"animate",
+"speed": 0.5
+}]
+
+[node name="FlowerTemplate" instance=ExtResource("1_wk5qr")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_qcxj4")
+frame = 1
+
+[node name="CollisionShape2D" parent="FlowerHurt" index="0"]
+position = Vector2(-2, -3)

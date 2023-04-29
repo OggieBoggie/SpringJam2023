@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3jbirk87r43w"]
+[gd_scene load_steps=20 format=3 uid="uid://c1fl0pqecr5ng"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
@@ -12,8 +12,13 @@
 [ext_resource type="PackedScene" uid="uid://caqjqkrh8ppf5" path="res://objects/Rock2.tscn" id="10_fu7op"]
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="11_2y4b8"]
 [ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="12_dfoca"]
-[ext_resource type="PackedScene" uid="uid://id0d54xfhrs" path="res://objects/flower_template.tscn" id="13_iesx2"]
+[ext_resource type="PackedScene" uid="uid://dmf60oo8v8n0y" path="res://objects/flowers/pink-flower.tscn" id="14_25wyp"]
 [ext_resource type="PackedScene" uid="uid://ql08l654c71e" path="res://Chicken/chicken.tscn" id="14_d0dw8"]
+[ext_resource type="PackedScene" uid="uid://b7u8r24mrylmk" path="res://objects/flowers/white-flower.tscn" id="15_dhkan"]
+[ext_resource type="Script" path="res://objects/FlowerTemplate.gd" id="15_x2j6m"]
+[ext_resource type="PackedScene" uid="uid://b8mpndm7w82uq" path="res://objects/flowers/yellow-flower.tscn" id="16_nc7e4"]
+[ext_resource type="PackedScene" path="res://objects/flowers/blue-flower.tscn" id="17_dv13v"]
+[ext_resource type="PackedScene" uid="uid://c7qvgkh3f50a0" path="res://objects/flowers/purple-flower.tscn" id="19_4xhoj"]
 
 [node name="Level 0" type="Node2D"]
 y_sort_enabled = true
@@ -62,16 +67,28 @@ position = Vector2(-395, -238)
 [node name="BottomRight" parent="PlayerCam/Limits" index="1"]
 position = Vector2(362, 219)
 
-[node name="FlowerTemplate" parent="." instance=ExtResource("13_iesx2")]
-position = Vector2(-65, -7)
-
-[node name="FlowerTemplate2" parent="." instance=ExtResource("13_iesx2")]
-position = Vector2(-28, -18)
-
-[node name="FlowerTemplate3" parent="." instance=ExtResource("13_iesx2")]
-position = Vector2(7, -19)
-
 [node name="Chicken" parent="." instance=ExtResource("14_d0dw8")]
 position = Vector2(-157, -15)
+
+[node name="FlowerTemplate" parent="." instance=ExtResource("14_25wyp")]
+position = Vector2(-41, -21)
+script = ExtResource("15_x2j6m")
+
+[node name="FlowerTemplate2" parent="." instance=ExtResource("15_dhkan")]
+position = Vector2(-30, -3)
+
+[node name="FlowerTemplate3" parent="." instance=ExtResource("16_nc7e4")]
+position = Vector2(-16, -19)
+script = ExtResource("15_x2j6m")
+
+[node name="FlowerTemplate4" parent="." instance=ExtResource("17_dv13v")]
+position = Vector2(18, -22)
+script = ExtResource("15_x2j6m")
+
+[node name="FlowerTemplate5" parent="." instance=ExtResource("17_dv13v")]
+position = Vector2(-26, 15)
+
+[node name="FlowerTemplate6" parent="." instance=ExtResource("19_4xhoj")]
+position = Vector2(43, -5)
 
 [editable path="PlayerCam"]
