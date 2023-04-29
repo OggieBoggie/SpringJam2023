@@ -2,6 +2,9 @@ extends Area2D
 
 var player = null
 
+func can_see_player():
+	return player != null
+	
 # if the collision shape of the detection enters the player's hitbox, call this function
 func _on_body_entered(body):
 	player = body

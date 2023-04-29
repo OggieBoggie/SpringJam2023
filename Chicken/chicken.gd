@@ -1,42 +1,59 @@
 extends CharacterBody2D
 
-enum CHICKEN_STATE { IDLE, WALK, CHASE }
-
 @export var move_speed : float = 50
-@export var acceleration : float = 80
+@export var acceleration : float = 5000
 @export var idle_time : float = 5
 @export var walk_time : float = 2
 
 @onready var animation_tree = $AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
 @onready var sprite = $Sprite2D
-@onready var timer = $Timer
+@onready var walk_timer = $WalkTimer
+@onready var idle_timer = $IdleTimer
 @onready var player_detection = $PlayerDetection
 
+enum { Idle, Walk, Chase }
+
+var state = Idle
+
+var knockback = Vector2.ZERO
 var move_direction : Vector2 = Vector2.ZERO
-var current_state : CHICKEN_STATE = CHICKEN_STATE.IDLE
 
 func _ready():
 	animation_tree.active = true
-	pick_new_state()
+	idle_timer.start(idle_time)
 
 func _physics_process(delta):
-	if (current_state == CHICKEN_STATE.WALK):
-		velocity = move_speed * move_direction
+
+	match state:
+		Idle:
+			state_machine.travel("Idle")
+			velocity = move_direction.move_toward(Vector2.ZERO, 200 * delta)
+			seek_player()
+		Walk:
+			state_machine.travel("Walk")
+			velocity = move_speed * move_direction
+			walk_timer.start(walk_time)
+			move_and_slide()
+			seek_player()
 			
-		move_and_slide()
-	
-	var player = player_detection.player
-	
-	if (player != null):
-		current_state == CHICKEN_STATE.CHASE
-		
-	if (current_state == CHICKEN_STATE.CHASE):
-		state_machine.travel("Chase")
-		var direction_to_player = (player.global_position - global_position).normalized()
-		velocity = move_direction.move_toward(direction_to_player * move_speed, acceleration * delta)
+		Chase:
+			state_machine.travel("Chase")
+			var player = player_detection.player
+			if player != null:
+				var direction = (player.global_position - global_position).normalized()
+				velocity = move_direction.move_toward(direction * move_speed, acceleration * delta)
+				move_and_slide()
+			else:
+				state = Idle
+				idle_timer.start(idle_time)
+			sprite.flip_h = velocity.x < 0
+
 			
-		move_and_slide()
+
+func seek_player():
+	if player_detection.can_see_player():
+		state = Chase
 
 func select_new_direction():
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1))
@@ -46,17 +63,11 @@ func select_new_direction():
 	elif (move_direction.x > 0):
 		sprite.flip_h = false
 
-func pick_new_state():
-	if (current_state == CHICKEN_STATE.IDLE):
-		state_machine.travel("Walk")
-		current_state = CHICKEN_STATE.WALK
-		select_new_direction()
-		timer.start(walk_time)
-	elif (current_state == CHICKEN_STATE.WALK):
-		state_machine.travel("Idle")
-		current_state = CHICKEN_STATE.IDLE
-		timer.start(idle_time)
+func _on_walk_timer_timeout():
+	state = Idle
+	idle_timer.start(idle_time)
 
-
-func _on_timer_timeout():
-	pick_new_state()
+func _on_idle_timer_timeout():
+	state = Walk
+	select_new_direction()
+	walk_timer.start(walk_time)
