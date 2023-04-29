@@ -64,4 +64,10 @@ position = Vector2(362, 219)
 [node name="FlowerTemplate" parent="." instance=ExtResource("13_iesx2")]
 position = Vector2(-65, -7)
 
+[node name="FlowerTemplate2" parent="." instance=ExtResource("13_iesx2")]
+position = Vector2(-28, -18)
+
+[node name="FlowerTemplate3" parent="." instance=ExtResource("13_iesx2")]
+position = Vector2(7, -19)
+
 [editable path="PlayerCam"]
