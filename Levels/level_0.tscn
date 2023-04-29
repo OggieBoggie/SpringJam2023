@@ -69,37 +69,25 @@ position = Vector2(362, 219)
 [node name="Chicken" parent="." instance=ExtResource("14_d0dw8")]
 position = Vector2(-157, -15)
 
-[node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
-position = Vector2(-36, -16)
-
-[node name="White" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-13, -12)
-
-[node name="White2" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-11, -21)
-
 [node name="White3" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-1, -16)
-
-[node name="White4" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-22, -18)
-
-[node name="White5" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-26, 5)
-
-[node name="White6" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-26, 5)
-
-[node name="purple" parent="." instance=ExtResource("16_miyyb")]
-position = Vector2(-38, 1)
-
-[node name="pink" parent="." instance=ExtResource("17_am7ly")]
-position = Vector2(-16, 7)
-
-[node name="pink2" parent="." instance=ExtResource("17_am7ly")]
-position = Vector2(-10, 0)
+position = Vector2(1, -41)
 
 [node name="Blue" parent="." instance=ExtResource("18_tkxhl")]
-position = Vector2(-22, -2)
+position = Vector2(16, -30)
+
+[node name="Blue2" parent="." instance=ExtResource("18_tkxhl")]
+position = Vector2(-29, -20)
+
+[node name="pink" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-35, -1)
+
+[node name="purple" parent="." instance=ExtResource("16_miyyb")]
+position = Vector2(-26, 14)
+
+[node name="White" parent="." instance=ExtResource("15_lmvsr")]
+position = Vector2(-6, -14)
+
+[node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
+position = Vector2(23, -11)
 
 [editable path="PlayerCam"]
