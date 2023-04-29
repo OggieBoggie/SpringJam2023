@@ -5,6 +5,9 @@ extends CharacterBody2D
 
 @onready var animation_tree = $Player_AnimationTree
 @onready var state_machine = animation_tree.get("parameters/playback")
+@onready var hurtbox = $Hurtbox
+@onready var sprite = $Sprite2D
+@onready var timer = $Transparent
 
 enum {
 	Walk,
@@ -45,6 +48,18 @@ func move_state():
 func water_state():
 	state_machine.travel("Water")
 
+func water_finished():
+	state = Walk
+
+func _on_hurtbox_area_entered(area):
+	stats.health -= 1
+	sprite.modulate.a = 0.5
+	hurtbox.start_invincibility(5)
+	timer.start(5)
+
+func _on_transparent_timeout():
+	sprite.modulate.a = 1
+
 func dash_state():
 	pass
 
@@ -59,6 +74,3 @@ func pick_new_state():
 		state_machine.travel("Walk")
 	else:
 		state_machine.travel("Idle")
-
-func water_finished():
-	state = Walk
