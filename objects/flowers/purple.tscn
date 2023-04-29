@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bug0l58vns74n"]
+
+[ext_resource type="PackedScene" uid="uid://id0d54xfhrs" path="res://objects/flower_template.tscn" id="1_emr75"]
+[ext_resource type="Texture2D" uid="uid://q64a23vhvprs" path="res://assets/Edited Textures/Purple-Flower-Sheet.png" id="2_nyq20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6we2u"]
+atlas = ExtResource("2_nyq20")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2i3l"]
+atlas = ExtResource("2_nyq20")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v52es"]
+atlas = ExtResource("2_nyq20")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cv4bl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6we2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2i3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v52es")
+}],
+"loop": false,
+"name": &"animate",
+"speed": 0.5
+}]
+
+[node name="purple" instance=ExtResource("1_emr75")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(1, -6)
+sprite_frames = SubResource("SpriteFrames_cv4bl")

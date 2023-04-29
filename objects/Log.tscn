@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iw4gd"]
 size = Vector2(21, 8)
 
-[node name="ObjectTemplate" instance=ExtResource("1_5m2ol")]
+[node name="Logs" instance=ExtResource("1_5m2ol")]
 
 [node name="Sprite2D" parent="." index="0"]
 position = Vector2(0, 2)
