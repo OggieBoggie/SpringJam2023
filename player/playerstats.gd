@@ -8,7 +8,6 @@ extends Node
 	set(value):
 		score = value
 		emit_signal("score_changed", score)
-		print(score)
 		if score == win_score:
 			score = 0
 			emit_signal("winning")

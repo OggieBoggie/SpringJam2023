@@ -67,8 +67,11 @@ func dash_state():
 	pass
 
 func change_scene():
-	current_level += 1
-	get_tree().change_scene_to_file("res://Levels/level_" + str(current_level) + ".tscn" )
+	if (get_tree().current_scene.name == "level0"):
+		get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+	elif (get_tree().current_scene.name == "level1"):
+		get_tree().change_scene_to_file("res://Levels/level_2.tscn")
+	# add your level here
 
 func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):

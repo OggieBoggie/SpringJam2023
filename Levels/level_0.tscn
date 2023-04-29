@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://88bmggsogo22" path="res://objects/flowers/pink.tscn" id="17_am7ly"]
 [ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="18_tkxhl"]
 
-[node name="Level 0" type="Node2D"]
+[node name="level0" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ucpj4")]
