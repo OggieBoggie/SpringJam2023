@@ -20,6 +20,7 @@ var state = Walk
 
 func _ready():
 	stats.no_health.connect(queue_free)
+	stats.winning.connect(change_scene)
 	animation_tree.active = true
 	animation_tree.set("parameters/Idle/blend_position", starting_direction)
 
@@ -62,6 +63,9 @@ func _on_transparent_timeout():
 
 func dash_state():
 	pass
+
+func change_scene():
+	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
 
 func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):
