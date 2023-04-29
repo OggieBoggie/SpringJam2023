@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://88bmggsogo22" path="res://objects/flowers/pink.tscn" id="17_am7ly"]
 [ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="18_tkxhl"]
 
-[node name="Level 0" type="Node2D"]
+[node name="level0" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ucpj4")]
@@ -69,19 +69,43 @@ position = Vector2(362, 219)
 [node name="Chicken" parent="." instance=ExtResource("14_d0dw8")]
 position = Vector2(-157, -15)
 
-[node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
-position = Vector2(-36, -16)
-
-[node name="White" parent="." instance=ExtResource("15_lmvsr")]
-position = Vector2(-13, -12)
-
-[node name="purple" parent="." instance=ExtResource("16_miyyb")]
-position = Vector2(-38, 1)
-
-[node name="pink" parent="." instance=ExtResource("17_am7ly")]
-position = Vector2(-27, 13)
+[node name="White3" parent="." instance=ExtResource("15_lmvsr")]
+position = Vector2(1, -41)
 
 [node name="Blue" parent="." instance=ExtResource("18_tkxhl")]
-position = Vector2(-22, -2)
+position = Vector2(16, -30)
+
+[node name="Blue2" parent="." instance=ExtResource("18_tkxhl")]
+position = Vector2(-29, -20)
+
+[node name="pink" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-35, -1)
+
+[node name="pink2" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-21, -5)
+
+[node name="pink3" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-17, -16)
+
+[node name="pink4" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(-14, -25)
+
+[node name="pink5" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(1, -22)
+
+[node name="pink6" parent="." instance=ExtResource("17_am7ly")]
+position = Vector2(7, -9)
+
+[node name="purple" parent="." instance=ExtResource("16_miyyb")]
+position = Vector2(-26, 14)
+
+[node name="White" parent="." instance=ExtResource("15_lmvsr")]
+position = Vector2(-5, -11)
+
+[node name="White2" parent="." instance=ExtResource("15_lmvsr")]
+position = Vector2(12, -18)
+
+[node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
+position = Vector2(23, -11)
 
 [editable path="PlayerCam"]

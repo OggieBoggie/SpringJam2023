@@ -1,14 +1,17 @@
 extends Node
 
 # make sure to auto load the tscn file (not this file) in project settings when using it for player
-
+@export var win_score:  int = 10
 @export var score : int = 0:
 	get:
 		return score
 	set(value):
 		score = value
 		emit_signal("score_changed", score)
-		print(score)
+		if score == win_score:
+			score = 0
+			emit_signal("winning")
+		
 
 @export var max_health : int = 99:
 	# set get for getting max health
@@ -39,6 +42,8 @@ signal health_changed(value)
 signal max_health_changed(value)
 # signal when score changed
 signal score_changed(value)
+
+signal winning
 
 # function for changing health in case you need to call it
 func set_health(value):

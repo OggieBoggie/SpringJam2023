@@ -32,7 +32,12 @@ func set_max_hearts(value):
 	# self.hearts can not go above max_hearts
 	self.hearts = min(hearts, max_hearts)
 
+func update_lives():
+	hearts = PlayerStats.health
+	label.text = "x " + str(hearts)
+
 func _ready():
+	update_lives()
 	animation.frame = 0
 	# set the max hearts to the playerstat script's max hearts
 	self.max_hearts = PlayerStats.max_health

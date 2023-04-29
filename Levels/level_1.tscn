@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1p2en4kfbef5"]
+
+[ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_52w42"]
+[ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="2_60u5d"]
+[ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="3_dl7vt"]
+[ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="4_snee1"]
+[ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="5_pspi5"]
+
+[node name="level1" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_52w42")]
+position = Vector2(1, -1)
+
+[node name="PlayerCam" parent="." instance=ExtResource("2_60u5d")]
+
+[node name="Cow" parent="." instance=ExtResource("3_dl7vt")]
+position = Vector2(-66, -28)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_snee1")]
+
+[node name="Blue" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(10, -29)
+
+[node name="Blue11" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(23, -29)
+
+[node name="Blue2" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(0, -19)
+
+[node name="Blue3" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(-3, -28)
+
+[node name="Blue4" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(-8, -47)
+
+[node name="Blue10" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(5, -47)
+
+[node name="Blue5" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(25, -20)
+
+[node name="Blue6" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(12, -20)
+
+[node name="Blue7" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(19, -39)
+
+[node name="Blue8" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(8, -38)
+
+[node name="Blue9" parent="." instance=ExtResource("5_pspi5")]
+position = Vector2(-5, -38)
