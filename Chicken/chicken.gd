@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var move_speed : float = 50
+@export var move_speed : float = 80
 @export var acceleration : float = 5000
 @export var idle_time : float = 5
 @export var walk_time : float = 2

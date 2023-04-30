@@ -188,7 +188,7 @@ graph_offset = Vector2(-88, 62)
 size = Vector2(22, 12)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ea7b"]
-radius = 99.0051
+radius = 211.002
 
 [node name="Chicken" type="CharacterBody2D"]
 script = ExtResource("1_kwvhi")
@@ -238,8 +238,8 @@ debug_color = Color(0.792157, 0.4, 0.411765, 0.419608)
 
 [node name="IdleTimer" type="Timer" parent="."]
 
-[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
 [connection signal="timeout" from="WalkTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
 [connection signal="area_entered" from="PlayerDetection" to="." method="_on_player_detection_area_entered"]
 [connection signal="area_entered" from="PlayerDetection" to="PlayerDetection" method="_on_area_entered"]
 [connection signal="area_exited" from="PlayerDetection" to="PlayerDetection" method="_on_area_exited"]
