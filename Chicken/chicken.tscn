@@ -1,7 +1,7 @@
 [gd_scene load_steps=37 format=3 uid="uid://ql08l654c71e"]
 
 [ext_resource type="Script" path="res://Chicken/chicken.gd" id="1_kwvhi"]
-[ext_resource type="Texture2D" path="res://assets/chickenpack_assets/ChickenSpriteSheet.png" id="1_va6cx"]
+[ext_resource type="Texture2D" uid="uid://bleb1mbdql5rq" path="res://assets/chickenpack_assets/ChickenSpriteSheet.png" id="1_va6cx"]
 [ext_resource type="PackedScene" uid="uid://blf4l8bdtbjna" path="res://HitHurtBoxes/hitbox.tscn" id="3_met61"]
 [ext_resource type="PackedScene" uid="uid://1juvft616nif" path="res://HitHurtBoxes/player_detection.tscn" id="4_5f1o1"]
 
