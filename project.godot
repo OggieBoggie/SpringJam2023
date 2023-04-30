@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SpringJam2023"
-run/main_scene="res://Levels/level_0.tscn"
+run/main_scene="res://Levels/level_1.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 

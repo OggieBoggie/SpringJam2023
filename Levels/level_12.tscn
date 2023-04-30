@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c40cpd883hpxe"]
+
+[ext_resource type="PackedScene" uid="uid://uor7tebi4v3v" path="res://Levels/level_0.tscn" id="1_3wifl"]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_f1vcc"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="level0" parent="." instance=ExtResource("1_3wifl")]
+
+[node name="Player_AnimationTree" parent="level0/Player" index="5"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_f1vcc")
+
+[editable path="level0"]
+[editable path="level0/Player"]
+[editable path="level0/Player/Hurtbox"]
+[editable path="level0/Player/WaterHitbox/HitBox"]
+[editable path="level0/User Interface/GameOver"]
+[editable path="level0/PlayerCam"]
