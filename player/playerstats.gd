@@ -53,6 +53,6 @@ func set_score(value):
 	score = value
 
 func _ready():
-	self.health = max_health - 96
+	self.health = max_health - 98
 
 

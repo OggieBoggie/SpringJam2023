@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/HealthBar.gd" id="1_wljk7"]
 [ext_resource type="Texture2D" uid="uid://cas8sjpp48co8" path="res://assets/Edited Textures/Health Animation.png" id="2_aojxm"]
 [ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="3_i4a17"]
-[ext_resource type="Texture2D" uid="uid://cbnwe5oqqxfc1" path="res://assets/Edited Textures/Blue-Flower-Sheet.png" id="4_o2866"]
+[ext_resource type="Texture2D" uid="uid://c62or6io0bnma" path="res://assets/Edited Textures/Star.png" id="4_7cikq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_moaf8"]
 atlas = ExtResource("2_aojxm")
@@ -59,8 +59,7 @@ offset_right = 387.0
 offset_bottom = 26.0
 theme_override_fonts/font = ExtResource("3_i4a17")
 
-[node name="Blue-flower-sheet" type="Sprite2D" parent="."]
-position = Vector2(323, 8)
-texture = ExtResource("4_o2866")
-hframes = 4
-frame = 3
+[node name="Star" type="Sprite2D" parent="."]
+position = Vector2(321, 8)
+scale = Vector2(1.125, 1.125)
+texture = ExtResource("4_7cikq")
