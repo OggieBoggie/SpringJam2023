@@ -341,6 +341,7 @@ position = Vector2(-15, 42)
 position = Vector2(-1, 42)
 
 [node name="Sunflower9" parent="Sunflower/Sunflower/Sunflower/Sunflower28/Sunflower28" instance=ExtResource("7_6gejf")]
+z_index = 1
 position = Vector2(-267, 42)
 
 [node name="Sunflower10" parent="Sunflower/Sunflower/Sunflower/Sunflower28/Sunflower28" instance=ExtResource("7_6gejf")]

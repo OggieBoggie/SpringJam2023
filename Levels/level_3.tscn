@@ -1,10 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://c3fvnvdqvbivo"]
+[gd_scene load_steps=29 format=3 uid="uid://csk1xs6vnbuyy"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_c5icw"]
 [ext_resource type="Texture2D" uid="uid://gygd6l35rw7k" path="res://assets/Sprout Lands - Sprites/tilesets/Ground tiles/new tiles/Grass hill tiles v.2.png" id="1_o217i"]
-[ext_resource type="PackedScene" path="res://player/player-cam.tscn" id="2_4nmep"]
+[ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="2_4nmep"]
 [ext_resource type="Texture2D" uid="uid://c1ki6p026ekgn" path="res://assets/Sprout Lands - Sprites/tilesets/Building parts/Wood Bridge v.2 .png" id="2_46yyv"]
-[ext_resource type="Texture2D" uid="uid://duuq624x82pks" path="res://assets/Sprout Lands - Sprites/tilesets/water frames/Water.png" id="2_tcr5y"]
+[ext_resource type="Texture2D" uid="uid://duuq624x82pks" path="res://assets/Sprout Lands - Sprites/tilesets/Water.png" id="2_tcr5y"]
 [ext_resource type="Texture2D" uid="uid://1tnt6a54vpir" path="res://assets/Sprout Lands - Sprites/tilesets/Ground tiles/new tiles/Grass tiles with animates water-export.png" id="4_e1ea1"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="7_fhg0e"]
 [ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="7_qlqe0"]
@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="17_2mm2o"]
 [ext_resource type="PackedScene" uid="uid://b8u3hr05y075n" path="res://objects/Stumps.tscn" id="18_cueco"]
 [ext_resource type="PackedScene" uid="uid://ciukaqn8jrria" path="res://objects/Sunflower.tscn" id="19_slkqf"]
-[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://objects/Well.tscn" id="20_l6rol"]
+[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://player/Well.tscn" id="20_l6rol"]
 [ext_resource type="PackedScene" uid="uid://q0gk7l2h7n1p" path="res://objects/Rock1.tscn" id="21_xbqqs"]
 [ext_resource type="PackedScene" uid="uid://barmvkswk2erp" path="res://objects/Log.tscn" id="22_qfkcg"]
 
