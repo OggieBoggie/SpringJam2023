@@ -37,8 +37,10 @@ texture = ExtResource("6_0is3j")
 sources/0 = SubResource("TileSetAtlasSource_mo7st")
 
 [node name="level2" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_66son")]
+y_sort_enabled = true
 position = Vector2(0, -24)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -153,11 +155,9 @@ position = Vector2(-488, -99)
 position = Vector2(-502, -99)
 
 [node name="Sunflower17" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-474, -99)
 
 [node name="Sunflower18" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-460, -99)
 
 [node name="Sunflower19" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
@@ -191,14 +191,12 @@ position = Vector2(182, 0)
 position = Vector2(196, 0)
 
 [node name="Sunflower21" parent="Sunflower/Sunflower/Sunflower/Sunflower21" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(14, -8)
 
 [node name="Sunflower22" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
 position = Vector2(-390, -99)
 
 [node name="Sunflower23" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-404, -99)
 
 [node name="Sunflower24" parent="Sunflower/Sunflower/Sunflower" instance=ExtResource("7_6gejf")]
@@ -586,14 +584,12 @@ position = Vector2(70, -41)
 position = Vector2(-196, -41)
 
 [node name="Sunflower10" parent="Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-211, -41)
 
 [node name="Sunflower11" parent="Sunflower" instance=ExtResource("7_6gejf")]
 position = Vector2(-182, -41)
 
 [node name="Sunflower12" parent="Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-168, -41)
 
 [node name="Sunflower13" parent="Sunflower" instance=ExtResource("7_6gejf")]
@@ -675,13 +671,13 @@ position = Vector2(0, -8)
 position = Vector2(0, -8)
 
 [node name="Sunflower6" parent="Sunflower/Sunflower21/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6" instance=ExtResource("7_6gejf")]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 
 [node name="Sunflower6" parent="Sunflower/Sunflower21/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6" instance=ExtResource("7_6gejf")]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 
 [node name="Sunflower6" parent="Sunflower/Sunflower21/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6" instance=ExtResource("7_6gejf")]
-position = Vector2(0, -8)
+position = Vector2(0, -9)
 
 [node name="Sunflower6" parent="Sunflower/Sunflower21/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6/Sunflower6" instance=ExtResource("7_6gejf")]
 position = Vector2(0, -8)
@@ -2998,7 +2994,6 @@ position = Vector2(14, 0)
 position = Vector2(14, 0)
 
 [node name="Sunflower12" parent="Sunflower/Sunflower53/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(14, 0)
 
 [node name="Sunflower12" parent="Sunflower/Sunflower53/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12/Sunflower12" instance=ExtResource("7_6gejf")]
@@ -3617,7 +3612,6 @@ position = Vector2(0, -8)
 position = Vector2(0, -8)
 
 [node name="Sunflower56" parent="Sunflower" instance=ExtResource("7_6gejf")]
-z_index = 1
 position = Vector2(-644, 182)
 
 [node name="Sunflower2" parent="Sunflower/Sunflower56" instance=ExtResource("7_6gejf")]
@@ -5568,7 +5562,7 @@ position = Vector2(0, 9)
 position = Vector2(0, 9)
 
 [node name="Sunflower58" parent="Sunflower" instance=ExtResource("7_6gejf")]
-position = Vector2(168, -155)
+position = Vector2(168, -156)
 
 [node name="Sunflower2" parent="Sunflower/Sunflower58" instance=ExtResource("7_6gejf")]
 position = Vector2(0, -11)
