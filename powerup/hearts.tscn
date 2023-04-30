@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ded1ib1iew6ul"]
+
+[ext_resource type="Script" path="res://powerup/hearts.gd" id="1_fk8vm"]
+[ext_resource type="Texture2D" uid="uid://dfkgueptubyp5" path="res://assets/Edited Textures/heart.png" id="1_mqu2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wntk0"]
+size = Vector2(8, 8)
+
+[node name="Hearts" type="Area2D"]
+collision_layer = 0
+collision_mask = 64
+script = ExtResource("1_fk8vm")
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(0, -3)
+texture = ExtResource("1_mqu2b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_wntk0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
