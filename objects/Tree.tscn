@@ -9,9 +9,10 @@ size = Vector2(18, 17)
 [node name="Tree" instance=ExtResource("1_c1byd")]
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(1, -9)
 texture = ExtResource("2_1i0h2")
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(-1, 7.5)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_meb57")
