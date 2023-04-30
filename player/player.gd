@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var hurtbox = $Hurtbox
 @onready var sprite = $Sprite2D
 @onready var timer = $Transparent
+@onready var detection = $Detection/DetectPlayer
 @onready var current_level = 0
 
 enum {
@@ -58,10 +59,12 @@ func _on_hurtbox_area_entered(area):
 	stats.health -= 1
 	sprite.modulate.a = 0.5
 	hurtbox.start_invincibility(5)
+	detection.set_deferred("disabled", true)
 	timer.start(5)
 
 func _on_transparent_timeout():
 	sprite.modulate.a = 1
+	detection.set_deferred("disabled", false)
 
 func dash_state():
 	pass
