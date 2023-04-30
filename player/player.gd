@@ -73,6 +73,9 @@ func _on_transparent_timeout():
 	detection.set_deferred("disabled", false)
 
 func dash_state():
+	sprite.modulate.a = 0.5
+	hurtbox.start_invincibility(0.5)
+	timer.start(0.5)
 	can_dash = false
 	acceleration = dash_velocity
 	dash_timer.start()
