@@ -590,7 +590,6 @@ radius = 6.0
 height = 32.0
 
 [node name="Main" type="CharacterBody2D"]
-
 script = ExtResource("1_ckm2o")
 
 [node name="Detection" type="Area2D" parent="."]
