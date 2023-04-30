@@ -1,10 +1,10 @@
-[gd_scene load_steps=22 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=23 format=3 uid="uid://uor7tebi4v3v"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
 [ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="3_ewpu2"]
-[ext_resource type="PackedScene" uid="uid://bpcvkdvavmjrl" path="res://UI/game_over.tscn" id="3_p5ujf"]
-[ext_resource type="PackedScene" uid="uid://b5mpvkifymge1" path="res://UI/pause_menu.tscn" id="4_b4o01"]
+[ext_resource type="PackedScene" path="res://UI/game_over.tscn" id="3_p5ujf"]
+[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="4_b4o01"]
 [ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://objects/Well.tscn" id="4_blr85"]
 [ext_resource type="PackedScene" uid="uid://ctkx6by4k6v7q" path="res://objects/Tree.tscn" id="5_2a50l"]
 [ext_resource type="PackedScene" uid="uid://ciukaqn8jrria" path="res://objects/Sunflower.tscn" id="6_srulp"]
@@ -22,10 +22,15 @@
 [ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="18_tkxhl"]
 [ext_resource type="PackedScene" uid="uid://ded1ib1iew6ul" path="res://powerup/hearts.tscn" id="19_n0wdn"]
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_icvcj"]
+
 [node name="level0" type="Node2D"]
 y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ucpj4")]
+
+[node name="Player_AnimationTree" parent="Player" index="5"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_icvcj")
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../PlayerCam")
@@ -130,5 +135,8 @@ position = Vector2(23, -11)
 [node name="Hearts" parent="." instance=ExtResource("19_n0wdn")]
 position = Vector2(38, 37)
 
+[editable path="Player"]
+[editable path="Player/Hurtbox"]
+[editable path="Player/WaterHitbox/HitBox"]
 [editable path="User Interface/GameOver"]
 [editable path="PlayerCam"]
