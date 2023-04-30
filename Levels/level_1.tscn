@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d1p2en4kfbef5"]
+[gd_scene load_steps=25 format=3]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_52w42"]
 [ext_resource type="Texture2D" uid="uid://gygd6l35rw7k" path="res://assets/Sprout Lands - Sprites/tilesets/Ground tiles/new tiles/Grass hill tiles v.2.png" id="1_i2fx3"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://coukokfj3jhow" path="res://objects/flowers/yellow.tscn" id="9_5suwl"]
 [ext_resource type="PackedScene" uid="uid://ciukaqn8jrria" path="res://objects/Sunflower.tscn" id="10_ynpa0"]
 [ext_resource type="PackedScene" uid="uid://ctkx6by4k6v7q" path="res://objects/Tree.tscn" id="11_tsvwr"]
-[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://objects/Well.tscn" id="12_6k2mt"]
+[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://player/Well.tscn" id="12_6k2mt"]
 [ext_resource type="PackedScene" uid="uid://b8u3hr05y075n" path="res://objects/Stumps.tscn" id="13_yqr1a"]
 [ext_resource type="PackedScene" uid="uid://q0gk7l2h7n1p" path="res://objects/Rock1.tscn" id="14_q7an6"]
 [ext_resource type="PackedScene" uid="uid://caqjqkrh8ppf5" path="res://objects/Rock2.tscn" id="15_uxn7p"]

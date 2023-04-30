@@ -1,11 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=22 format=3 uid="uid://b8ft4mlemcw00"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
 [ext_resource type="PackedScene" uid="uid://cv1jksh0kdo3f" path="res://Cow/cow.tscn" id="3_ewpu2"]
 [ext_resource type="PackedScene" uid="uid://bpcvkdvavmjrl" path="res://UI/game_over.tscn" id="3_p5ujf"]
 [ext_resource type="PackedScene" uid="uid://b5mpvkifymge1" path="res://UI/pause_menu.tscn" id="4_b4o01"]
-[ext_resource type="PackedScene" uid="uid://c0l52d5nhtpx3" path="res://objects/Well.tscn" id="4_blr85"]
 [ext_resource type="PackedScene" uid="uid://ctkx6by4k6v7q" path="res://objects/Tree.tscn" id="5_2a50l"]
 [ext_resource type="PackedScene" uid="uid://ciukaqn8jrria" path="res://objects/Sunflower.tscn" id="6_srulp"]
 [ext_resource type="PackedScene" uid="uid://b8u3hr05y075n" path="res://objects/Stumps.tscn" id="7_j5ugw"]
@@ -57,9 +56,6 @@ visible = false
 
 [node name="Cow" parent="." instance=ExtResource("3_ewpu2")]
 position = Vector2(75, 4)
-
-[node name="Well" parent="." instance=ExtResource("4_blr85")]
-position = Vector2(32, 85)
 
 [node name="Tree" parent="." instance=ExtResource("5_2a50l")]
 position = Vector2(-35, 82)
