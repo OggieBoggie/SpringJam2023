@@ -97,7 +97,12 @@ func change_scene():
 		get_tree().change_scene_to_file("res://Levels/level_3.tscn")
 	elif (get_tree().current_scene.name == "level3"):
 		get_tree().change_scene_to_file("res://Levels/level_4.tscn")
-
+	elif (get_tree().current_scene.name == "level4"):
+		get_tree().change_scene_to_file("res://Levels/level_5.tscn")
+	elif (get_tree().current_scene.name == "level5"):
+		get_tree().change_scene_to_file("res://UI/winner.tscn")
+		
+		
 func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):
 		animation_tree.set("parameters/Walk/blend_position", move_input)
