@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_52w42"]
 [ext_resource type="Texture2D" uid="uid://gygd6l35rw7k" path="res://assets/Sprout Lands - Sprites/tilesets/Ground tiles/new tiles/Grass hill tiles v.2.png" id="1_i2fx3"]
-[ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="2_60u5d"]
+[ext_resource type="PackedScene" path="res://player/player-cam.tscn" id="2_60u5d"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="4_snee1"]
 [ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="5_pspi5"]
 [ext_resource type="PackedScene" uid="uid://88bmggsogo22" path="res://objects/flowers/pink.tscn" id="6_tneym"]

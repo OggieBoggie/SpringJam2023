@@ -96,8 +96,8 @@ func change_scene():
 	elif (get_tree().current_scene.name == "level2"):
 		get_tree().change_scene_to_file("res://Levels/level_3.tscn")
 	elif (get_tree().current_scene.name == "level3"):
-		get_tree().change_scene_to_file("res://Levels/level_4.tscn")
-	elif (get_tree().current_scene.name == "level4"):
+#		get_tree().change_scene_to_file("res://Levels/level_4.tscn")
+#	elif (get_tree().current_scene.name == "level4"):
 		get_tree().change_scene_to_file("res://Levels/level_5.tscn")
 	elif (get_tree().current_scene.name == "level5"):
 		get_tree().change_scene_to_file("res://UI/winner.tscn")

@@ -2217,3 +2217,4 @@ position = Vector2(-686, 104)
 [editable path="PlayerCam"]
 [editable path="CanvasLayer/GameOver"]
 [editable path="CanvasLayer/PauseMenu"]
+
