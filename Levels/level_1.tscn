@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d1p2en4kfbef5"]
+[gd_scene load_steps=24 format=3 uid="uid://d1p2en4kfbef5"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_52w42"]
 [ext_resource type="Texture2D" uid="uid://gygd6l35rw7k" path="res://assets/Sprout Lands - Sprites/tilesets/Ground tiles/new tiles/Grass hill tiles v.2.png" id="1_i2fx3"]
@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="16_wti08"]
 [ext_resource type="PackedScene" uid="uid://bwwkbi78yj5ms" path="res://objects/Hay.tscn" id="17_gq8qs"]
 [ext_resource type="PackedScene" uid="uid://barmvkswk2erp" path="res://objects/Log.tscn" id="18_u8fn7"]
+[ext_resource type="PackedScene" path="res://UI/game_over.tscn" id="19_fn767"]
+[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="20_q3sid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlocd"]
 texture = ExtResource("1_i2fx3")
@@ -108,6 +110,10 @@ position = Vector2(1, -1)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HealthBar" parent="CanvasLayer" instance=ExtResource("4_snee1")]
+
+[node name="GameOver" parent="CanvasLayer" instance=ExtResource("19_fn767")]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("20_q3sid")]
 
 [node name="Blue" parent="." instance=ExtResource("5_pspi5")]
 position = Vector2(-53, -39)
@@ -200,3 +206,4 @@ position = Vector2(189, -131)
 [editable path="Player/Hurtbox"]
 [editable path="Player/WaterHitbox/HitBox"]
 [editable path="PlayerCam"]
+[editable path="CanvasLayer/GameOver"]
