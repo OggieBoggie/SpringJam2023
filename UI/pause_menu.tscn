@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5mpvkifymge1"]
+
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_7qk8l"]
+[ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="2_aukea"]
+[ext_resource type="Texture2D" uid="uid://bi3npl8b8jdko" path="res://assets/Sprout Lands - UI Pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png" id="3_cxndv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dc4d"]
+atlas = ExtResource("3_cxndv")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_687xx"]
+atlas = ExtResource("3_cxndv")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjekw"]
+atlas = ExtResource("3_cxndv")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcane"]
+atlas = ExtResource("3_cxndv")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5u0w"]
+atlas = ExtResource("3_cxndv")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c6k52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dc4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_687xx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjekw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcane")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5u0w")
+}],
+"loop": true,
+"name": &"animation",
+"speed": 2.0
+}]
+
+[sub_resource type="Theme" id="Theme_g3emv"]
+
+[node name="PauseMenu" type="Node"]
+process_mode = 3
+script = ExtResource("1_7qk8l")
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+offset_right = 410.0
+offset_bottom = 228.0
+color = Color(0, 0, 0, 0.352941)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+position = Vector2(203, 100)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_c6k52")
+animation = &"animation"
+frame_progress = 0.100939
+
+[node name="Paused" type="Label" parent="."]
+offset_left = 24.0
+offset_top = 6.0
+offset_right = 388.0
+offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("2_aukea")
+theme_override_font_sizes/font_size = 45
+text = "Game is Paused"
+
+[node name="Resume" type="Button" parent="."]
+offset_left = 46.0
+offset_top = 162.0
+offset_right = 171.0
+offset_bottom = 217.0
+theme = SubResource("Theme_g3emv")
+text = "Resume"
+
+[node name="Retry" type="Button" parent="."]
+offset_left = 238.0
+offset_top = 162.0
+offset_right = 363.0
+offset_bottom = 217.0
+theme = SubResource("Theme_g3emv")
+text = "Retry"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Retry" to="." method="_on_retry_pressed"]
