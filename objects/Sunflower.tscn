@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bvufxr25o8t2f" path="res://assets/Edited Textures/Flower.png" id="2_d6kyd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjtvg"]
-size = Vector2(14, 8)
+size = Vector2(14, 9)
 
 [node name="Sunflower" instance=ExtResource("1_l52n4")]
 
@@ -13,5 +13,5 @@ texture = ExtResource("2_d6kyd")
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2(0, 1)
+position = Vector2(0, 1.5)
 shape = SubResource("RectangleShape2D_rjtvg")

@@ -74,7 +74,10 @@ func change_scene():
 		get_tree().change_scene_to_file("res://Levels/level_1.tscn")
 	elif (get_tree().current_scene.name == "level1"):
 		get_tree().change_scene_to_file("res://Levels/level_2.tscn")
-	# add your level here
+	elif (get_tree().current_scene.name == "level2"):
+		get_tree().change_scene_to_file("res://Levels/level_3.tscn")
+	elif (get_tree().current_scene.name == "level3"):
+		get_tree().change_scene_to_file("res://Levels/level_4.tscn")
 
 func update_animation_parameters(move_input : Vector2):
 	if (move_input != Vector2.ZERO):
