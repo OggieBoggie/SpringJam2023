@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var move_speed : float = 100
+@export var dash_velocity : float
 @export var starting_direction : Vector2 = Vector2(0, 1)
 
 @onready var animation_tree = $Player_AnimationTree
@@ -9,36 +10,41 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var timer = $Transparent
 @onready var detection = $Detection/DetectPlayer
+@onready var dash_timer = $Dash_Timer
+@onready var dash_cooldown = $Dash_Cooldown
 @onready var current_level = 0
 
 enum {
 	Walk,
-	Water,
-	Dash
+	Water
 }
 
 var stats = PlayerStats
 var state = Walk
+var acceleration : float
+var can_dash : bool = true
 
 func _ready():
 	stats.no_health.connect(queue_free)
 	stats.winning.connect(change_scene)
 	animation_tree.active = true
 	animation_tree.set("parameters/Idle/blend_position", starting_direction)
+	acceleration = move_speed
 
 func _physics_process(delta):
+	if (Input.is_action_just_pressed("Dash") and can_dash):
+		dash_state()
+	
 	match state:
 		Walk:
 			move_state()
 		Water:
 			water_state()
-		Dash:
-			pass
 
 func move_state():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 		
-	velocity = input_direction * move_speed
+	velocity = input_direction * acceleration
 	
 	update_animation_parameters(input_direction)
 	
@@ -67,7 +73,17 @@ func _on_transparent_timeout():
 	detection.set_deferred("disabled", false)
 
 func dash_state():
-	pass
+	can_dash = false
+	acceleration = dash_velocity
+	dash_timer.start()
+
+func _on_dash_timer_timeout():
+	acceleration = move_speed
+	state = Walk
+	dash_cooldown.start()
+
+func _on_dash_cooldown_timeout():
+	can_dash = true
 
 func change_scene():
 	if (get_tree().current_scene.name == "level0"):

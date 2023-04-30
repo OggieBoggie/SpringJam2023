@@ -592,6 +592,7 @@ height = 32.0
 [node name="Main" type="CharacterBody2D"]
 collision_layer = 65
 script = ExtResource("1_ckm2o")
+dash_velocity = 350.0
 
 [node name="Detection" type="Area2D" parent="."]
 collision_layer = 8
@@ -648,9 +649,18 @@ disabled = true
 
 [node name="Transparent" type="Timer" parent="."]
 
+[node name="Dash_Timer" type="Timer" parent="."]
+wait_time = 0.35
+one_shot = true
+
+[node name="Dash_Cooldown" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="animation_finished" from="Player_AnimationPlayer" to="." method="_on_player_animation_player_animation_finished"]
 [connection signal="timeout" from="Transparent" to="." method="_on_transparent_timeout"]
+[connection signal="timeout" from="Dash_Timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="Dash_Cooldown" to="." method="_on_dash_cooldown_timeout"]
 
 [editable path="Hurtbox"]
 [editable path="WaterHitbox/HitBox"]
