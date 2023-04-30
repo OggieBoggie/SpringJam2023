@@ -18,8 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://bbdf1fl0s6st5" path="res://objects/Rock3.tscn" id="16_wti08"]
 [ext_resource type="PackedScene" uid="uid://bwwkbi78yj5ms" path="res://objects/Hay.tscn" id="17_gq8qs"]
 [ext_resource type="PackedScene" uid="uid://barmvkswk2erp" path="res://objects/Log.tscn" id="18_u8fn7"]
-[ext_resource type="PackedScene" path="res://UI/game_over.tscn" id="19_fn767"]
-[ext_resource type="PackedScene" path="res://UI/pause_menu.tscn" id="20_q3sid"]
+[ext_resource type="PackedScene" uid="uid://bpcvkdvavmjrl" path="res://UI/game_over.tscn" id="19_fn767"]
+[ext_resource type="PackedScene" uid="uid://b5mpvkifymge1" path="res://UI/pause_menu.tscn" id="20_q3sid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xlocd"]
 texture = ExtResource("1_i2fx3")
