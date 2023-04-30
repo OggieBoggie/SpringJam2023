@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://uor7tebi4v3v"]
+[gd_scene load_steps=20 format=3 uid="uid://uor7tebi4v3v"]
 
 [ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="1_ucpj4"]
 [ext_resource type="PackedScene" uid="uid://ckeyyhd1en2ax" path="res://UI/HealthBar.tscn" id="2_vxf7g"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bug0l58vns74n" path="res://objects/flowers/purple.tscn" id="16_miyyb"]
 [ext_resource type="PackedScene" uid="uid://88bmggsogo22" path="res://objects/flowers/pink.tscn" id="17_am7ly"]
 [ext_resource type="PackedScene" uid="uid://h33infkyoo1i" path="res://objects/flowers/blue.tscn" id="18_tkxhl"]
+[ext_resource type="PackedScene" uid="uid://ded1ib1iew6ul" path="res://powerup/hearts.tscn" id="19_n0wdn"]
 
 [node name="level0" type="Node2D"]
 y_sort_enabled = true
@@ -107,5 +108,8 @@ position = Vector2(12, -18)
 
 [node name="Yellow" parent="." instance=ExtResource("14_c7siy")]
 position = Vector2(23, -11)
+
+[node name="Hearts" parent="." instance=ExtResource("19_n0wdn")]
+position = Vector2(38, 37)
 
 [editable path="PlayerCam"]
