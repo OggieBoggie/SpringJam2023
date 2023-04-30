@@ -69,3 +69,4 @@ func _on_idle_timer_timeout():
 	state = Walk
 	select_new_direction()
 	walk_timer.start(walk_time)
+
