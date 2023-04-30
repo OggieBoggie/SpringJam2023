@@ -4,11 +4,11 @@ var player = null
 
 func can_see_player():
 	return player != null
-	
-# if the collision shape of the detection enters the player's hitbox, call this function
-func _on_body_entered(body):
-	player = body
 
-# call this function if the player's hitbox leaves the detection of this shape
-func _on_body_exited(body):
+func _on_area_exited(area):
+	print("Bye")
 	player = null
+
+func _on_area_entered(area):
+	print("Hello")
+	player = area
