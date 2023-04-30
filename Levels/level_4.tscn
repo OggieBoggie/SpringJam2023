@@ -1,4 +1,14 @@
-[gd_scene format=3 uid="uid://bhs1hbtmricvw"]
+[gd_scene load_steps=3 format=3 uid="uid://bhs1hbtmricvw"]
+
+[ext_resource type="PackedScene" uid="uid://c2jh7m8w0qq1k" path="res://player/player-cam.tscn" id="1_2avnh"]
+[ext_resource type="PackedScene" uid="uid://dnqb0hxaf0xi3" path="res://player/player.tscn" id="2_jy83s"]
 
 [node name="level4" type="Node2D"]
 y_sort_enabled = true
+
+[node name="PlayerCam" parent="." instance=ExtResource("1_2avnh")]
+
+[node name="Main" parent="." instance=ExtResource("2_jy83s")]
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Main"]
+remote_path = NodePath("../../PlayerCam")
