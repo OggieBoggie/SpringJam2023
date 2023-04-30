@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bhs1hbtmricvw"]
+[gd_scene format=3 uid="uid://d1nyer3yo0yqk"]
 
 [node name="level4" type="Node2D"]
 y_sort_enabled = true
