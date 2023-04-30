@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://ca68agxpjiwdw"]
+
+[ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="1_rsgmy"]
+[ext_resource type="Texture2D" uid="uid://bi3npl8b8jdko" path="res://assets/Sprout Lands - UI Pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png" id="2_kjful"]
+
+[sub_resource type="Theme" id="Theme_kff5e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djp1l"]
+atlas = ExtResource("2_kjful")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue10i"]
+atlas = ExtResource("2_kjful")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1bdh"]
+atlas = ExtResource("2_kjful")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0dl2"]
+atlas = ExtResource("2_kjful")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cl3ax"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djp1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue10i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1bdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0dl2")
+}],
+"loop": true,
+"name": &"animate",
+"speed": 1.0
+}]
+
+[node name="Winner" type="Node"]
+process_mode = 3
+
+[node name="Button" type="Button" parent="."]
+offset_left = 138.0
+offset_top = 163.0
+offset_right = 263.0
+offset_bottom = 218.0
+theme = SubResource("Theme_kff5e")
+text = "Restart
+"
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+offset_right = 410.0
+offset_bottom = 228.0
+color = Color(0, 0, 0, 0.352941)
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 393.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("1_rsgmy")
+theme_override_font_sizes/font_size = 30
+text = "Thank you for Playing"
+
+[node name="Happy" type="AnimatedSprite2D" parent="."]
+position = Vector2(197, 102)
+scale = Vector2(2.625, 2.625)
+sprite_frames = SubResource("SpriteFrames_cl3ax")
+animation = &"animate"
+frame_progress = 0.249695
