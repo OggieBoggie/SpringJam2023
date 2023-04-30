@@ -467,7 +467,7 @@ sources/3 = SubResource("TileSetAtlasSource_8ca6i")
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_jbewr"]
 
-[node name="level_3" type="Node2D"]
+[node name="level3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_7r2in")
