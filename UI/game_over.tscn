@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs0d7xkajqpl8"]
+[gd_scene load_steps=7 format=3 uid="uid://bs0d7xkajqpl8"]
 
 [ext_resource type="Script" path="res://UI/game_over.gd" id="1_dpv8k"]
 [ext_resource type="Texture2D" uid="uid://bi3npl8b8jdko" path="res://assets/Sprout Lands - UI Pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png" id="2_7qond"]
@@ -19,7 +19,10 @@ animations = [{
 "speed": 1.0
 }]
 
+[sub_resource type="Theme" id="Theme_6wrre"]
+
 [node name="GameOver" type="Node"]
+process_mode = 3
 script = ExtResource("1_dpv8k")
 
 [node name="BlackOverlay" type="ColorRect" parent="."]
@@ -28,11 +31,11 @@ offset_bottom = 228.0
 color = Color(0, 0, 0, 0.352941)
 
 [node name="Sleeping" type="AnimatedSprite2D" parent="."]
-position = Vector2(187, 111)
+position = Vector2(177, 109)
 scale = Vector2(2.625, 2.625)
 sprite_frames = SubResource("SpriteFrames_qhofo")
 animation = &"animate"
-frame_progress = 0.623846
+frame_progress = 0.0501805
 
 [node name="GameOver" type="Label" parent="."]
 offset_left = 63.0
@@ -42,3 +45,13 @@ offset_bottom = 87.0
 theme_override_fonts/font = ExtResource("2_52fpu")
 theme_override_font_sizes/font_size = 45
 text = "Good Night"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 125.0
+offset_top = 164.0
+offset_right = 250.0
+offset_bottom = 219.0
+theme = SubResource("Theme_6wrre")
+text = "Retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
