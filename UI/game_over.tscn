@@ -1,10 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://bs0d7xkajqpl8"]
+[gd_scene load_steps=10 format=3 uid="uid://bpcvkdvavmjrl"]
 
 [ext_resource type="Script" path="res://UI/game_over.gd" id="1_dpv8k"]
 [ext_resource type="Texture2D" uid="uid://bi3npl8b8jdko" path="res://assets/Sprout Lands - UI Pack/Sprite sheets/Dialouge UI/Emotes/Teemo Basic emote animations sprite sheet.png" id="2_7qond"]
 [ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="2_52fpu"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_key6c"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8fln"]
+atlas = ExtResource("2_7qond")
+region = Rect2(0, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aq64d"]
+atlas = ExtResource("2_7qond")
+region = Rect2(0, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypp3x"]
+atlas = ExtResource("2_7qond")
+region = Rect2(32, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi2h3"]
 atlas = ExtResource("2_7qond")
 region = Rect2(0, 448, 32, 32)
 
@@ -12,7 +24,16 @@ region = Rect2(0, 448, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_key6c")
+"texture": SubResource("AtlasTexture_y8fln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aq64d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypp3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi2h3")
 }],
 "loop": true,
 "name": &"animate",
@@ -31,11 +52,10 @@ offset_bottom = 228.0
 color = Color(0, 0, 0, 0.352941)
 
 [node name="Sleeping" type="AnimatedSprite2D" parent="."]
-position = Vector2(177, 109)
+position = Vector2(182, 109)
 scale = Vector2(2.625, 2.625)
 sprite_frames = SubResource("SpriteFrames_qhofo")
 animation = &"animate"
-frame_progress = 0.0501805
 
 [node name="GameOver" type="Label" parent="."]
 offset_left = 63.0
