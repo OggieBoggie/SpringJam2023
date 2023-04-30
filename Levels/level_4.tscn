@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bhs1hbtmricvw"]
+
+[node name="level4" type="Node2D"]
+y_sort_enabled = true
