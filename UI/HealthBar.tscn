@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckeyyhd1en2ax"]
+[gd_scene load_steps=9 format=3 uid="uid://ckeyyhd1en2ax"]
 
 [ext_resource type="Script" path="res://UI/HealthBar.gd" id="1_wljk7"]
 [ext_resource type="Texture2D" uid="uid://cas8sjpp48co8" path="res://assets/Edited Textures/Health Animation.png" id="2_aojxm"]
 [ext_resource type="FontFile" uid="uid://d12bo1us4o6w2" path="res://assets/font/VCR_OSD_MONO_1.001.ttf" id="3_i4a17"]
+[ext_resource type="Texture2D" uid="uid://cbnwe5oqqxfc1" path="res://assets/Edited Textures/Blue-Flower-Sheet.png" id="4_o2866"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_moaf8"]
 atlas = ExtResource("2_aojxm")
@@ -41,7 +42,7 @@ position = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_2x47a")
 animation = &"animate"
 
-[node name="Label" type="Label" parent="."]
+[node name="Health" type="Label" parent="."]
 layout_mode = 0
 offset_left = 30.0
 offset_top = 18.0
@@ -50,3 +51,16 @@ offset_bottom = 48.0
 pivot_offset = Vector2(27, 0)
 theme_override_fonts/font = SubResource("FontVariation_vxub7")
 theme_override_font_sizes/font_size = 16
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 335.0
+offset_right = 387.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("3_i4a17")
+
+[node name="Blue-flower-sheet" type="Sprite2D" parent="."]
+position = Vector2(323, 8)
+texture = ExtResource("4_o2866")
+hframes = 4
+frame = 3
